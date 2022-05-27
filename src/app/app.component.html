@@ -151,7 +151,7 @@
       <div class="col-md-6">
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput formControlName="password" />
+          <input type="password" matInput formControlName="password" />
           <mat-error
             *ngIf="f.password.invalid && (f.password.dirty || f.password.touched || submitted)"
           >
@@ -164,7 +164,7 @@
     <div class="col-md-6">
       <mat-form-field appearance="outline">
         <mat-label>confirm Password</mat-label>
-        <input matInput formControlName="confirm_password" />
+        <input type="password" matInput formControlName="confirm_password" />
         <mat-error
         *ngIf="f.confirm_password.touched && f.confirm_password.invalid"          >
           <mat-error *ngIf="f.confirm_password.errors.confirmedValidator">

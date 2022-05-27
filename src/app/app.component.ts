@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   }
   addEmployeeForm(){
     this.employeeForm = this.fb.group({
+      id:[0],
       firstName:[null,Validators.required],
       lastName:[null,Validators.required],
       dob:[null,Validators.required],
@@ -56,21 +57,29 @@ export class AppComponent implements OnInit {
     }
   }
 editUser(e:any){
-   this.userService.updateEmployee(e.id,e).subscribe(res=>{ 
-      this.getEmployesData();
-     });
+  
+     this.employeeForm.patchValue(e);
  
   }
   onAddEmployeeData(){
     this.submitted = true;
+    if(this.employeeForm.value.id>0){
+      this.userService.updateEmployee(this.employeeForm.value.id,this.employeeForm.value).subscribe(res=>{ 
+        this.getEmployesData();
+        
+    this.submitted = false;
+    this.employeeForm.reset();
+       });
+    }
     console.log(this.employeeForm.value);
     this.userService.addEmployee(this.employeeForm.value).subscribe(res=>{
       console.log(res);
       this.getEmployesData();
-     
-    })
+      
     this.submitted = false;
     this.employeeForm.reset();
+     
+    })
   }
 
   getEmployesData(){
@@ -80,8 +89,6 @@ editUser(e:any){
     })
   }
 
-
-  
   get f(): any {
     return this.employeeForm.controls;
   }
@@ -91,7 +98,6 @@ editUser(e:any){
       this.getEmployesData();
      });
   }
-
 
 }
 
