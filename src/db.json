@@ -1,0 +1,37 @@
+{
+    "employee": [
+        {
+            "firstName": "kimmy2",
+            "lastName":"kim2",
+            "dob": "1992-07-07T18:30:00.000Z",
+            "gender": "Female",
+            "company": "management",
+            "email": "kimm2y@gmail.com",
+            "mobileNumber": "7410852963",
+            "password":"test",
+            "id": 6
+          },
+          {
+            "firstName": "kimmy1",
+            "lastName":"kim1",
+            "dob": "1997-07-010T18:30:00.000Z",
+            "gender": "Female",
+            "company": "ABC",
+            "email": "kimmy1@gmail.com",
+            "mobileNumber": "7410852963",
+            "password":"test",
+            "id": 2
+          },
+      {
+        "firstName": "kimmy",
+        "lastName":"kim",
+        "dob": "1992-07-07T18:30:00.000Z",
+        "gender": "Female",
+        "company": "IT",
+        "email": "kimmy@gmail.com",
+        "mobileNumber": "7410852963",
+        "password":"test",
+        "id": 6
+      }
+    ]
+  }
