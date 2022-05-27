@@ -204,12 +204,12 @@
   </thead>
   <tbody>
     <tr *ngFor="let d of data">
-      <td>{{d.data.firstName}}</td>
-      <td>{{d.data.lastname}}</td>
-      <td>{{d.data.dob}}</td>
-      <td>{{d.data.company}}</td>
-      <td>{{d.data.gender}}</td>
-      <td>{{d.data.mobileNumber}}</td>
+      <td>{{d.firstName}}</td>
+      <td>{{d.lastname}}</td>
+      <td>{{d.dob}}</td>
+      <td>{{d.company}}</td>
+      <td>{{d.gender}}</td>
+      <td>{{d.mobileNumber}}</td>
       <td><button (click)="editUser(d)">Edit</button></td>
       <td><button (click)="deleteUser(d)">Delete</button></td>
 

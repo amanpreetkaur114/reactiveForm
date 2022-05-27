@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     }
   }
 editUser(e:any){
-   this.userService.updateEmployee(e.data.id,e.data).subscribe(res=>{ 
+   this.userService.updateEmployee(e.id,e).subscribe(res=>{ 
       this.getEmployesData();
      });
  
@@ -86,7 +86,7 @@ editUser(e:any){
     return this.employeeForm.controls;
   }
   deleteUser(e:any) {
-    this.userService.deleteEmployee(e.data.id).subscribe(res=>{ 
+    this.userService.deleteEmployee(e.id).subscribe(res=>{ 
       console.log(res);
       this.getEmployesData();
      });
